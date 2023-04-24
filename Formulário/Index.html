@@ -14,7 +14,6 @@
 
 
     <style>
-
         .login {
             position: fixed;
             width: 100%;
@@ -23,6 +22,7 @@
             justify-content: center;
             display: flex;
         }
+        
     </style>
 </head>
 
@@ -127,66 +127,69 @@
                     <div class="row">
                         <div class="col">
                             <label for="">Endereço:</label>
-                            <input type="text" class="form-control" placeholder="Clique Para Inserir"
+                            <input name="rua" type="text" class="form-control" placeholder="Clique Para Inserir"
                                 aria-label="First name" id="rua">
                         </div>
                         <div class="col">
                             <label for="">Complemento:</label>
-                            <input type="text" class="form-control" placeholder="Clique Para Inserir"
+                            <input name="uf" type="text" class="form-control" placeholder="Clique Para Inserir"
                                 aria-label="Last name" id="uf">
                         </div>
                         <div class="col">
                             <label for="">Bairro</label>
-                            <input type="text" class="form-control" placeholder="Clique Para Inserir"
+                            <input name="bairro" type="text" class="form-control" placeholder="Clique Para Inserir"
                                 aria-label="Last name" id="bairro">
                         </div>
                         <div class="col">
                             <label for="">CEP</label>
-                            <input type="text" class="form-control" placeholder="Clique Para Inserir"
+                            <input name="cep" type="text" class="form-control" placeholder="Clique Para Inserir"
                                 aria-label="Last name" id="cep">
                         </div>
                     </div>
 
                     <br>
 
-                    <div class="mb-3">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            Enviar
-                          </button>
-                          
-                          <!-- Modal -->
-                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse nostrum, eum velit placeat obcaecati nesciunt iure minima beatae eaque rem distinctio facere nulla consequuntur, autem eligendi, dicta commodi nobis.
-                                  Repudiandae iure tempora perspiciatis dolorum pariatur praesentium? Doloremque, magnam minima earum ipsam rem assumenda consequuntur atque reprehenderit, ullam commodi quos. Odio quos dolore non ex quasi et earum vitae veritatis!
-                                  
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Enviar</button>
-                                  <button type="button" class="btn btn-primary">Cancelar</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
+                    /div>
                 </form>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    <script>
-       
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse nostrum,
+                                        eum velit placeat obcaecati nesciunt iure minima beatae eaque rem distinctio
+                                        facere nulla consequuntur, autem eligendi, dicta commodi nobis.
+                                        Repudiandae iure tempora perspiciatis dolorum pariatur praesentium? Doloremque,
+                                        magnam minima earum ipsam rem assumenda consequuntur atque reprehenderit, ullam
+                                        commodi quos. Odio quos dolore non ex quasi et earum vitae veritatis!
 
-    </script>
-    </script>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Enviar</button>
+                                        <button type="close" class="btn btn-primary">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="mb-3">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Enviar
+                        </button>
 
+                        <!-- Modal -->
+                        
+                    <
+
+    
 </body>
 
 </html>
