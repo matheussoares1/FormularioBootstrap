@@ -22,7 +22,7 @@
             justify-content: center;
             display: flex;
         }
-        
+
     </style>
 </head>
 
@@ -31,7 +31,7 @@
     <!-- Navbar content -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">FORMULÁRIO BOOTSTRAP</a>
+            <a class="navbar-brand" href="#">FORMULÁRIO </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -40,32 +40,30 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Cadastro</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Lorem</a>
+                        <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Lorem
+                            Outras Opções
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Lorem</a></li>
-                            <li><a class="dropdown-item" href="#">Lorem Lorem</a></li>
+                            <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                            <li><a class="dropdown-item" href="#">Gráficos</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#">Lorem</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Lorem</a>
-                    </li>
+
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar<!--  --></button>
                 </form>
             </div>
         </div>
@@ -143,53 +141,50 @@
                         <div class="col">
                             <label for="">CEP</label>
                             <input name="cep" type="text" class="form-control" placeholder="Clique Para Inserir"
-                                aria-label="Last name" id="cep">
+                                aria-label="Last name" id="cep" maxlength="8">
                         </div>
                     </div>
+            </div>
+            <br>
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Enviar Dados
+                </button>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Usando Modal</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label>Deseja realmente salvar as informações?</label>
 
-                    <br>
-
-                    /div>
-                </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="close" class="btn btn-primary">Salvar</button>
+                </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse nostrum,
-                                        eum velit placeat obcaecati nesciunt iure minima beatae eaque rem distinctio
-                                        facere nulla consequuntur, autem eligendi, dicta commodi nobis.
-                                        Repudiandae iure tempora perspiciatis dolorum pariatur praesentium? Doloremque,
-                                        magnam minima earum ipsam rem assumenda consequuntur atque reprehenderit, ullam
-                                        commodi quos. Odio quos dolore non ex quasi et earum vitae veritatis!
+    <div class="mb-3">
+        <script>
+            const cep = document.getElementById("cep");
+            cep.addEventListener("keyup", formatarCEP)
 
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Enviar</button>
-                                        <button type="close" class="btn btn-primary">Cancelar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="mb-3">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Enviar
-                        </button>
-
-                        <!-- Modal -->
-                        
-                    <
-
-    
+            function formatarCEP(e) {
+                var v = e.target.value.replace(/\D/g, "")
+                v = v.replace(/^(\d{5})(\d{3})$/, "$1-$2")
+                e.target.value = v
+            }
+        </script>
 </body>
 
 </html>
